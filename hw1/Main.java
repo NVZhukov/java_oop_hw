@@ -19,7 +19,7 @@ public class Main {
         heroes.add(vl2);
         Monk mk = new Monk("Sergiy");
         heroes.add(mk);
-        Magician mg = new Magician("Voland",130,90,15,45);
+        Magician mg = new Magician("Voland",130,90,15,110);
         heroes.add(mg);
         Sniper sp = new Sniper("Tom Beket");
         heroes.add(sp);
@@ -28,11 +28,16 @@ public class Main {
         Crossbowman cb = new Crossbowman("Robin Gud");
         heroes.add(cb);
 
+        sr2.dealDamage(vl1);
+        vl1.printInfo();
+
+        if(!mg.dealDamage(sp)){
+            heroes.remove(sp);
+            System.out.printf("%s hp: %d\n", sp.getName(),sp.getHealth());
+        }
+
         for(BaseHero bh : heroes){
             bh.printInfo();
         }
-
-        sr2.dealDamage(vl1);
-        vl1.printInfo();
     }
 }

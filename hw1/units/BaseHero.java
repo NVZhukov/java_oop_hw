@@ -23,6 +23,7 @@ public abstract class BaseHero {
     public boolean dealDamage(BaseHero bh){
         int attack = bh.getHealth() - this.damage;
         if(attack <= 0){
+            bh.setHealth(attack);
             System.out.printf("Игрок %s выбывает...\n", bh.getName());
             return false;
         }
@@ -41,7 +42,7 @@ public abstract class BaseHero {
         return health;
     }
 
-    public void setHealth(int health) {
+    private void setHealth(int health) {
         this.health = health;
     }
 }
