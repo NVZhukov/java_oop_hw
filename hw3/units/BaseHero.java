@@ -1,4 +1,4 @@
-package java_oop_hw.hw2.units;
+package java_oop.homework.hw3.units;
 
 public abstract class BaseHero implements interForGame{
     protected String name;
@@ -23,7 +23,8 @@ public abstract class BaseHero implements interForGame{
     }
 
     public void printInfo(){
-        System.out.printf("%s hp: %d speed: %d min dmg: %d max dmg: %d\n", name,health,speed,minDamage, maxDamage);
+        System.out.printf("%s hp: %d speed: %d min dmg: %d max dmg: %d attack: %d defence: %d\n",
+                name,health,speed,minDamage, maxDamage,attack,defence);
     }
 
 //    public boolean dealDamage(BaseHero bh){
@@ -46,10 +47,6 @@ public abstract class BaseHero implements interForGame{
 
     public int getHealth() {
         return health;
-    }
-
-    private void setHealth(int health) {
-        this.health = health;
     }
 
     public int getSpeed() {

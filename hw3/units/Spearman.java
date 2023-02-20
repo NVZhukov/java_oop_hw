@@ -1,4 +1,4 @@
-package java_oop_hw.hw2.units;
+package java_oop.homework.hw3.units;
 
 public class Spearman extends BaseHero{
 

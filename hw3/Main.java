@@ -1,6 +1,6 @@
-package java_oop_hw.hw2;
+package java_oop.homework.hw3;
 
-import java_oop_hw.hw2.units.*;
+import java_oop.homework.hw3.units.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -12,39 +12,14 @@ public class Main {
         ArrayList<BaseHero> group1 = getListOfHero(1);
         ArrayList<BaseHero> group2 = getListOfHero(2);
 
-        group1.sort(new Comparator<BaseHero>() {
-            @Override
-            public int compare(BaseHero o1, BaseHero o2) {
-                if (o2.getSpeed() == o1.getSpeed()) return o2.getHealth() - o1.getHealth();
-
-                return o2.getSpeed() - o1.getSpeed();
-            }
-        });
-        group1.forEach(n -> System.out.println(n.getInfo()));
-        System.out.println("-----------------------------------------------------");
-        group2.sort(new Comparator<BaseHero>() {
-            @Override
-            public int compare(BaseHero o1, BaseHero o2) {
-                if (o2.getSpeed() == o1.getSpeed()) return o2.getHealth() - o1.getHealth();
-
-                return o2.getSpeed() - o1.getSpeed();
-            }
-        });
-        group2.forEach(n -> System.out.println(n.getInfo()));
-        System.out.println("--------------------------------------------------------");
         ArrayList<BaseHero> allHero = new ArrayList<>(group1.size() + group2.size());
         allHero.addAll(group1);
         allHero.addAll(group2);
 
-        allHero.sort(new Comparator<BaseHero>() {
-            @Override
-            public int compare(BaseHero o1, BaseHero o2) {
-                if (o2.getSpeed() == o1.getSpeed()) return o2.getHealth() - o1.getHealth();
-
-                return o2.getSpeed() - o1.getSpeed();
-            }
+        allHero.sort((o1, o2) -> {
+            if (o2.getSpeed() == o1.getSpeed()) return o2.getHealth() - o1.getHealth();
+            return o2.getSpeed() - o1.getSpeed();
         });
-
         allHero.forEach(n -> System.out.println(n.getInfo()));
     }
 
