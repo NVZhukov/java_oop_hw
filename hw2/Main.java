@@ -37,9 +37,9 @@ public class Main {
         }
 
         //default method
-        heroes.forEach(n -> System.out.println(n.getInfo(n.getName())));
+        //heroes.forEach(n -> System.out.println(n.getInfo(n.getName())));
         //method is different for everyone
-        //heroes.forEach(n -> System.out.println(n.getInfo()));
+        heroes.forEach(n -> System.out.println(n.getInfo()));
     }
 
     private static String getName(){

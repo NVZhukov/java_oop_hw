@@ -1,13 +1,13 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
 public class Bandit extends BaseHero{
 
 
-    public Bandit(String name) {
-        super(name, 120,80,5,10);
-        this.endurance = 15;
-    }
 
+    public Bandit(String name) {
+        super(name, 10,6,8,10,8,3);
+
+    }
 
     @Override
     public String getInfo() {

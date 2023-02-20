@@ -1,10 +1,10 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
-public class Crossbowman extends BaseHero{
+public class Crossbowman extends Archer{
 
 
     public Crossbowman(String name) {
-        super(name, 110,70,8,15);
+        super(name, 10,4,2,3,6,3,16);
     }
 
     @Override

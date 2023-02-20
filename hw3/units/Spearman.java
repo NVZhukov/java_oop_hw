@@ -1,10 +1,10 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
 public class Spearman extends BaseHero{
 
 
     public Spearman(String name) {
-        super(name,100,100,5,10);
+        super(name,10,4,1,3,4,5);
     }
 
     @Override

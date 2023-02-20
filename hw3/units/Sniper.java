@@ -1,10 +1,10 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
-public class Sniper extends BaseHero{
+public class Sniper extends Archer{
 
 
     public Sniper(String name) {
-        super(name, 110,70,8,15);
+        super(name, 15,9,8,10,12,10,32);
     }
 
     @Override

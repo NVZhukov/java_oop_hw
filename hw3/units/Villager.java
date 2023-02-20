@@ -1,10 +1,10 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
 public class Villager extends BaseHero{
 
 
     public Villager(String name) {
-        super(name, 120,90,5,5);
+        super(name, 1,3,1,1,1,1);
     }
 
     @Override

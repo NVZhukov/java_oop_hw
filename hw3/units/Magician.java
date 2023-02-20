@@ -1,10 +1,10 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
-public class Magician extends BaseHero{
+public class Magician extends Priest{
 
 
     public Magician(String name) {
-        super(name, 90,90,3,25);
+        super(name, 30,9,-5,-5,17,12,1);
     }
 
     @Override

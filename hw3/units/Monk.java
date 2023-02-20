@@ -1,10 +1,10 @@
-package java_oop.homework.hw2.units;
+package java_oop_hw.hw2.units;
 
-public class Monk extends BaseHero{
+public class Monk extends Priest{
 
 
     public Monk(String name) {
-        super(name, 90,80,3,20);
+        super(name, 30,5,-4,-4,12,7,1);
     }
 
     @Override
