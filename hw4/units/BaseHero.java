@@ -56,7 +56,12 @@ public abstract class BaseHero implements interForGame{
         return speed;
     }
 
+    public Point2D getPoint() {
+        return point;
+    }
+
+
     public abstract String getInfo();
 
-    public abstract void step(ArrayList<BaseHero> bh);
+    public abstract void step(ArrayList<BaseHero> enemy);
 }

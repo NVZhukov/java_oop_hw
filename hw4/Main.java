@@ -20,10 +20,10 @@ public class Main {
             if (o2.getSpeed() == o1.getSpeed()) return o2.getHealth() - o1.getHealth();
             return o2.getSpeed() - o1.getSpeed();
         });
-        //allHero.forEach(n -> System.out.println(n.getInfo()));
+        //allHero.forEach(n -> n.step(group2));
 
-        Sniper sniper = new Sniper("Papa",1,1);
-        sniper.step(allHero);
+        Sniper sniper = new Sniper("Ivan",1,1);
+        sniper.step(group2);
     }
 
     public static ArrayList<BaseHero> getListOfHero(int group) {

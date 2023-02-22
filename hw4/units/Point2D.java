@@ -9,4 +9,7 @@ public class Point2D {
         this.y = y;
     }
 
+    protected double distanceToPlayer(Point2D a, Point2D b){
+        return Math.sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
+    }
 }

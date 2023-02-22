@@ -15,7 +15,7 @@ public class Bandit extends BaseHero {
     }
 
     @Override
-    public void step(ArrayList<BaseHero> bh) {
+    public void step(ArrayList<BaseHero> enemy) {
 
     }
 
