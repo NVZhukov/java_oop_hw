@@ -13,26 +13,37 @@ public abstract class Archer extends BaseHero {
     }
 
     @Override
-    public void step(ArrayList<BaseHero> enemy) {
-        if (health == 0) System.out.printf("Игрок %s мертв", name);
-        else if (shot == 0) System.out.println("Стрелы закончились((");
-
+    public void step(ArrayList<BaseHero> friend,ArrayList<BaseHero> enemy) {
         ArrayList list = new ArrayList();
-
-        enemy.forEach(n -> list.add(point2D.distanceToPlayer(this.getPoint(),n.getPoint())));
+        enemy.forEach(n -> list.add(point2D.distanceToPlayer(this.getPoint(), n.getPoint())));
 
         int index = list.indexOf(Collections.min(list));
         enemy.get(index).printInfo();
-        if(enemy.get(index).health <= (this.minDamage + this.maxDamage)/2){
-            enemy.get(index).health = 0;
-            System.out.printf("Игрок %s выбывает.", enemy.get(index).getName());
-        }
-        else {
-            enemy.get(index).health -= (this.minDamage + this.maxDamage) / 2;
-            System.out.printf("Игрок %s нанес урон %d игроку %s. Осталось HP: %d",this.name,
-                    (this.minDamage + this.maxDamage) / 2,enemy.get(index).getName(),enemy.get(index).health);
-        }
 
-        //enemy.forEach(n -> n.printInfo());
+        if (health == 0) {
+            System.out.printf("Игрок %s мертв", name);
+        } else if (shot == 0) {
+            System.out.println("Нечем стрелять((");
+        } else {
+            if (enemy.get(index).health <= (minDamage + maxDamage) / 2) {
+                enemy.get(index).health = 0;
+                System.out.printf("Игрок %s выбывает. HP: %d\n", enemy.get(index).getName(), enemy.get(index).health);
+            } else {
+                enemy.get(index).health -= (minDamage + maxDamage) / 2;
+                System.out.printf("Игрок %s нанес урон %d игроку %s. Осталось HP: %d\n", name,
+                        (minDamage + maxDamage) / 2, enemy.get(index).getName(), enemy.get(index).health);
+            }
+
+            for (Object el : friend) {
+                if (el.getClass().getSimpleName().equals("Villager")) {
+                    System.out.printf("Крестьянин %s принес новую стрелу %s'y. Стрел осталось: %d\n", ((BaseHero) el).getName(), name, shot);
+                    break;
+                } else {
+                    shot--;
+                    System.out.printf("Свободных крестьян нет! Стрел осталось: %d\n", shot);
+                    break;
+                }
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ public class Spearman extends BaseHero {
     }
 
     @Override
-    public void step(ArrayList<BaseHero> enemy) {
+    public void step(ArrayList<BaseHero> friend,ArrayList<BaseHero> enemy) {
 
     }
 

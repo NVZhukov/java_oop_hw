@@ -63,5 +63,5 @@ public abstract class BaseHero implements interForGame{
 
     public abstract String getInfo();
 
-    public abstract void step(ArrayList<BaseHero> enemy);
+    public abstract void step(ArrayList<BaseHero> friend,ArrayList<BaseHero> enemy);
 }

@@ -3,7 +3,6 @@ package java_oop.homework.hw4;
 import java_oop.homework.hw4.units.*;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Random;
 
 public class Main {
@@ -20,10 +19,16 @@ public class Main {
             if (o2.getSpeed() == o1.getSpeed()) return o2.getHealth() - o1.getHealth();
             return o2.getSpeed() - o1.getSpeed();
         });
-        //allHero.forEach(n -> n.step(group2));
 
+        group1.forEach(n-> System.out.println(n.getInfo()));
+        System.out.println("---------------------------------");
+        group2.forEach(n-> System.out.println(n.getInfo()));
+        System.out.println("---------------------------------");
         Sniper sniper = new Sniper("Ivan",1,8);
-        sniper.step(group2);
+        sniper.step(group1,group2);
+        System.out.println("---------------------------------");
+        Crossbowman crossbowman = new Crossbowman("Den", 10,3);
+        crossbowman.step(group2,group1);
     }
 
     public static ArrayList<BaseHero> getListOfHero(int group) {
