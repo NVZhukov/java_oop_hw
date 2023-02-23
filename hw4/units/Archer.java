@@ -1,6 +1,6 @@
 package java_oop.homework.hw4.units;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public abstract class Archer extends BaseHero {
 
@@ -17,7 +17,22 @@ public abstract class Archer extends BaseHero {
         if (health == 0) System.out.printf("Игрок %s мертв", name);
         else if (shot == 0) System.out.println("Стрелы закончились((");
 
-        enemy.forEach(n -> System.out.printf("Расстояние между %s(%d, %d) и %s(%d, %d) = %f\n",
-                name,this.getPoint().x,this.getPoint().y,n.getName(),n.point.x,n.point.y,point2D.distanceToPlayer(this.getPoint(),n.getPoint())));
+        ArrayList list = new ArrayList();
+
+        enemy.forEach(n -> list.add(point2D.distanceToPlayer(this.getPoint(),n.getPoint())));
+
+        int index = list.indexOf(Collections.min(list));
+        enemy.get(index).printInfo();
+        if(enemy.get(index).health <= (this.minDamage + this.maxDamage)/2){
+            enemy.get(index).health = 0;
+            System.out.printf("Игрок %s выбывает.", enemy.get(index).getName());
+        }
+        else {
+            enemy.get(index).health -= (this.minDamage + this.maxDamage) / 2;
+            System.out.printf("Игрок %s нанес урон %d игроку %s. Осталось HP: %d",this.name,
+                    (this.minDamage + this.maxDamage) / 2,enemy.get(index).getName(),enemy.get(index).health);
+        }
+
+        //enemy.forEach(n -> n.printInfo());
     }
 }

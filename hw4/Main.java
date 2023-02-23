@@ -22,7 +22,7 @@ public class Main {
         });
         //allHero.forEach(n -> n.step(group2));
 
-        Sniper sniper = new Sniper("Ivan",1,1);
+        Sniper sniper = new Sniper("Ivan",1,8);
         sniper.step(group2);
     }
 
