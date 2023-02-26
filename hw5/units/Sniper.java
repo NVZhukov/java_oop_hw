@@ -4,7 +4,7 @@ public class Sniper extends Archer {
 
 
     public Sniper(String name, int x, int y) {
-        super(name, x, y, 15,15, 9, 8, 10, 12, 10, 32);
+        super(name, x, y, 60.f,60, 9, 3, 5, 10, 3, 22);
     }
 
     @Override

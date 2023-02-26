@@ -4,7 +4,7 @@ public class Crossbowman extends Archer{
 
 
     public Crossbowman(String name, int x, int y) {
-        super(name,x,y, 10,10,4,2,3,6,3,16);
+        super(name,x,y, 60.f,60,9,3,7,7,4,20);
     }
 
     @Override

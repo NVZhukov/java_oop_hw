@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Bandit extends BaseHero {
 
     public Bandit(String name, int x, int y) {
-        super(name, x, y, 10,10, 6, 8, 10, 8, 3);
+        super(name, x, y, 70.f,70, 6, 2, 6, 10, 7);
     }
 
     @Override

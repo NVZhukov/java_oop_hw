@@ -6,7 +6,7 @@ public class Spearman extends BaseHero {
 
 
     public Spearman(String name, int x, int y) {
-        super(name, x, y, 10,10, 4, 1, 3, 4, 5);
+        super(name, x, y, 70.f,70, 6, 2, 4, 10, 10);
     }
 
     @Override

@@ -6,7 +6,7 @@ public class Villager extends BaseHero {
 
 
     public Villager(String name, int x, int y) {
-        super(name, x, y, 1,1, 3, 1, 1, 1, 1);
+        super(name, x, y, 50.f,50, 3, 1, 1, 1, 1);
     }
 
     @Override
@@ -20,6 +20,7 @@ public class Villager extends BaseHero {
 
     @Override
     public void step(ArrayList<BaseHero> friend,ArrayList<BaseHero> enemy) {
+        if(!state.equals("Die")) state = "Stand";
     }
 
     @Override

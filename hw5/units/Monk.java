@@ -6,7 +6,7 @@ public class Monk extends Priest {
 
 
     public Monk(String name, int x, int y) {
-        super(name, x, y, 30,30, 5, -4, -4, 12, 7, 1);
+        super(name, x, y, 50.f,50, 7, -7, -7, 10, 3, 5);
     }
 
     @Override

@@ -6,7 +6,7 @@ public class Magician extends Priest {
 
 
     public Magician(String name, int x, int y) {
-        super(name, x, y, 30,30, 9, -5, -5, 17, 12, 1);
+        super(name, x, y, 50.f,50, 7, -6, -6, 9, 3, 5);
     }
 
     @Override
