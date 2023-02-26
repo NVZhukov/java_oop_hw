@@ -38,7 +38,6 @@ public class Main {
     }
 
     public static ArrayList<BaseHero> getListOfHero(int group) {
-
         int startingPoint = 1;
 
         ArrayList<BaseHero> nameList = new ArrayList<>();

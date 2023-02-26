@@ -15,12 +15,8 @@ public class Monk extends Priest {
         return builder.append("Монах: \t\t").append(java_oop.homework.hw5.units.Monk.super.name)
                 .append("\t\t| ATK:\t").append(java_oop.homework.hw5.units.Monk.super.attack)
                 .append("\t| HP:\t").append(Monk.super.health)
-                .append(" \t|\t\t\t|").append("\t| (X.Y) : ").append(Monk.super.point.x).append(".").append(Monk.super.point.y);
-    }
-
-    @Override
-    public void step(ArrayList<BaseHero> friend,ArrayList<BaseHero> enemy) {
-
+                .append(" \t| MP:\t").append(java_oop.homework.hw5.units.Monk.super.mana)
+                .append("\t|").append("\t| (X.Y) : ").append(Monk.super.point.x).append(".").append(Monk.super.point.y);
     }
 
     @Override

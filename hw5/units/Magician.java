@@ -15,12 +15,8 @@ public class Magician extends Priest {
         return builder.append("Колдун: \t").append(java_oop.homework.hw5.units.Magician.super.name)
                 .append("\t\t| ATK:\t").append(java_oop.homework.hw5.units.Magician.super.attack)
                 .append("\t| HP:\t").append(Magician.super.health)
-                .append(" \t|\t\t\t|").append("\t| (X.Y) : ").append(Magician.super.point.x).append(".").append(Magician.super.point.y);
-    }
-
-    @Override
-    public void step(ArrayList<BaseHero> friend,ArrayList<BaseHero> enemy) {
-
+                .append(" \t| MP:\t").append(java_oop.homework.hw5.units.Magician.super.mana)
+                .append("\t|").append("\t| (X.Y) : ").append(Magician.super.point.x).append(".").append(Magician.super.point.y);
     }
 
     @Override
