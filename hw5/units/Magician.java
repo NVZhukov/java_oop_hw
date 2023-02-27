@@ -1,6 +1,5 @@
 package java_oop.homework.hw5.units;
 
-import java.util.ArrayList;
 
 public class Magician extends Priest {
 

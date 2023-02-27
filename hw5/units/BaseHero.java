@@ -45,7 +45,7 @@ public abstract class BaseHero implements interForGame{
         if(health <= 0){
             health = 0;
             state = "Die";
-            point.y = 15; // аккуратно складываем мертвых в кучку чтобы переключиться на других вругов
+            point.y = 20; // аккуратно складываем мертвых в кучку чтобы переключиться на других вругов
         }
         if (health > maxHp) health = maxHp;
     }
