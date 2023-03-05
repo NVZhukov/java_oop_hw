@@ -29,7 +29,7 @@ public class View {
     private static String getChar(int x, int y){
         String out = "| ";
         for (BaseHero human: Main.allHero) {
-            if (human.getCoords()[0] == y && human.getCoords()[1] == x){
+            if (human.getCoords()[1] == x && human.getCoords()[0] == y){
                 if (human.getHealth() == 0) {
                     out = "|" + (AnsiColors.ANSI_RED + human.getInfo().charAt(0) + AnsiColors.ANSI_RESET);
                     break;

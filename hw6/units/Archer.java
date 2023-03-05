@@ -18,13 +18,10 @@ public abstract class Archer extends BaseHero {
 
         if (state.equals("Die") || shot == 0) return;
 
-        if (enemy.get(index).health == 0) {
-            index = findNearest(enemy);
-        }
         float damage = (enemy.get(index).defence - attack) > 0 ? minDamage : (enemy.get(index).defence - attack) < 0 ? maxDamage : (minDamage + maxDamage) / 2;
         enemy.get(index).getDamage(damage);
         for (BaseHero el : friend) {
-            if (el.getInfo().toString().split(":")[0].equals("Фермер") && el.state.equals("Stand")) {
+            if (el.toString().split(" ")[0].equals("Фермер") && el.state.equals("Stand")) {
                 el.state = "Busy";
                 return;
             }
