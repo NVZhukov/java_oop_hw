@@ -21,12 +21,15 @@ public abstract class Warrior extends BaseHero {
             opponent.getDamage(damage);
         } else {
             Point2D temp = point.getDifPoints(opponent.getPoint());
+            Point2D step = new Point2D(getPoint().x, getPoint().y);
+
             if (Math.abs(temp.x) < Math.abs(temp.y)) {
-                if (temp.y > 0) getPoint().y--;
-                else getPoint().y++;
+
+                if (temp.y > 0 && point.canMove(friend, step.x, step.y, 0, -1)) getPoint().y--;
+                else if (temp.y < 0 && point.canMove(friend, step.x, step.y, 0,1)) getPoint().y++;
             } else {
-                if (temp.x > 0) getPoint().x--;
-                else getPoint().x++;
+                if (temp.x > 0 && point.canMove(friend, step.x, step.y,-1,0)) getPoint().x--;
+                else if (temp.x < 0 && point.canMove(friend, step.x, step.y,1,0)) getPoint().x++;
             }
         }
     }
